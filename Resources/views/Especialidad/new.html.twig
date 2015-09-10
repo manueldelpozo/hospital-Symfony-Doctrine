@@ -1,0 +1,15 @@
+{% extends '::hospitalBackend.html.twig' %}
+
+{% block contenido %}
+    <h1>Especialidad creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('especialidad') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

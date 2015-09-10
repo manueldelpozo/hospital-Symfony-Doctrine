@@ -1,0 +1,30 @@
+medico:
+    path:     /
+    defaults: { _controller: "AcmeHelloBundle:Medico:index" }
+
+medico_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeHelloBundle:Medico:show" }
+
+medico_new:
+    path:     /new
+    defaults: { _controller: "AcmeHelloBundle:Medico:new" }
+
+medico_create:
+    path:     /create
+    defaults: { _controller: "AcmeHelloBundle:Medico:create" }
+    requirements: { _method: post }
+
+medico_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeHelloBundle:Medico:edit" }
+
+medico_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeHelloBundle:Medico:update" }
+    requirements: { _method: post|put }
+
+medico_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeHelloBundle:Medico:delete" }
+    requirements: { _method: post|delete }

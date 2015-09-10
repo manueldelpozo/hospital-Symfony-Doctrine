@@ -1,0 +1,11 @@
+{% extends '::hospital.html.twig' %}
+{% block contenido %}
+
+{% for especialidad in especialidades %}
+<li><a href="{{path('acme_hospital_datos_especialidad',{'id':especialidad.id})}}">{{especialidad.name}}</a></li>
+{% endfor %}
+
+{% endblock %}
+{% block right %}
+{% include 'AcmeHelloBundle:Default:derecha.html.twig'%}
+{% endblock %}

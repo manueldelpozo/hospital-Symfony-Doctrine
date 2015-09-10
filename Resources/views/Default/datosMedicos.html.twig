@@ -1,0 +1,15 @@
+{% extends '::hospital.html.twig' %}
+{% block contenido %}
+
+<h3>Dr. {{medico.name}}</h3>
+<p>Numéro de colegialización: {{medico.numColegiado}}</p>
+<ul>Especialidades:
+{% for especialidad in medico.especialidad %}
+<li>{{especialidad.name}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
+{% block right %}
+{% include 'AcmeHelloBundle:Default:derecha.html.twig'%}
+{% endblock %}

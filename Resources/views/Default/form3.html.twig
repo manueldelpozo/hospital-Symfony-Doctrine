@@ -1,0 +1,19 @@
+{{ form_start(form) }}
+{{ form_errors(form) }}
+Nombre
+<br>
+{{ form_errors(form.name) }}
+{{ form_widget(form.name) }}
+<br>
+Precio
+<br>
+{{ form_errors(form.price) }}
+{{ form_widget(form.price) }}
+<br>
+Descripcion
+<br>
+{{ form_errors(form.description) }}
+{{ form_widget(form.description) }}
+<br>
+<input type='submit' value='aceptar' name="submit">
+{{ form_end(form) }}

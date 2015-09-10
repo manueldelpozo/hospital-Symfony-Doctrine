@@ -1,0 +1,9 @@
+HelloBundle\Entity\Product:
+ properties:
+  name:
+   - NotBlank: ~
+  price:
+   - NotBlank: ~
+   - Type: \Integer
+  description:
+   -NotBlank: ~

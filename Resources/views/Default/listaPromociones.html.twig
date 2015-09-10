@@ -1,0 +1,6 @@
+{% extends '::hospital.html.twig' %}
+{% block right %}
+{% for promocion in promociones %}
+<li><a href="{{path('acme_hospital_datos_promocion',{'id':promocion.id})}}">{{promocion.name}}</a></li>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,30 @@
+promocion:
+    path:     /
+    defaults: { _controller: "AcmeHelloBundle:Promocion:index" }
+
+promocion_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeHelloBundle:Promocion:show" }
+
+promocion_new:
+    path:     /new
+    defaults: { _controller: "AcmeHelloBundle:Promocion:new" }
+
+promocion_create:
+    path:     /create
+    defaults: { _controller: "AcmeHelloBundle:Promocion:create" }
+    requirements: { _method: post }
+
+promocion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeHelloBundle:Promocion:edit" }
+
+promocion_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeHelloBundle:Promocion:update" }
+    requirements: { _method: post|put }
+
+promocion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeHelloBundle:Promocion:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,6 @@
+{% block contenido %}
+{% for promocion in promociones %}
+<li>{{promocion.name}}</li><a href="{{path('acme_hospital_datos_promocion',{'id':promocion.id})}}">&gt;&gt;</a>
+{% endfor %}
+{% endblock %}.
+

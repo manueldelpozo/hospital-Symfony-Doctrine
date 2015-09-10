@@ -1,0 +1,41 @@
+<?php
+
+namespace Acme\HelloBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="especialidad")
+ */
+class Especialidad 
+{
+    /**
+     * @ORM\Id
+	 * @ORM\Column(type="integer")
+	 * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+	
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $name;
+
+	/**
+     * @ORM\ManyToMany(targetEntity="Medico", mappedBy="especialidades")
+     */
+    private $medicos;
+	
+	public function __construct()
+	{
+		$this->medicos = new ArrayCollection();
+	}
+	
+	public function addMedico(Medico $medico)
+	{
+		$medico->addEspecialidad($this); //synchronously updating inverse side
+		$this->medicos[] = $medico;
+	}
+
+}    

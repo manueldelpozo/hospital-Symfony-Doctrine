@@ -1,0 +1,61 @@
+acme_hello_medico:
+    resource: "@AcmeHelloBundle/Resources/config/routing/medico.yml"
+    prefix:   /medico/backend
+acme_hello_especialidad:
+    resource: "@AcmeHelloBundle/Resources/config/routing/especialidad.yml"
+    prefix:   /especialidad/backend
+acme_hello_promocion:
+    resource: "@AcmeHelloBundle/Resources/config/routing/promocion.yml"
+    prefix:   /promocion/backend
+acme_hello_homepage:
+    path:     /hello/{nombre}/{curso}
+    defaults: { _controller: AcmeHelloBundle:Default:crearEstudiante }
+acme_hello_homepage:
+    path:     /myprueba/{name}
+    defaults: { _controller: AcmeHelloBundle:Default:index }
+acme_form:
+    path:      /myform
+    defaults: { _controller: AcmeHelloBundle:Default:form }
+    methods: [POST|GET]
+acme_insertado:
+    path:      /myinsertado
+    defaults: { _controller: AcmeHelloBundle:Default:insertado }
+acme_hospital_inicio:
+    path:      /hospital
+    defaults: { _controller: AcmeHelloBundle:Default:hospital }
+    methods: [POST|GET]
+acme_hospital_inicio_backend:
+    path:      /hospital/backend
+    defaults: { _controller: AcmeHelloBundle:Default:hospitalBackend }
+    methods: [POST|GET]
+acme_hospital_cuadro_medico:
+    path:      /medico
+    defaults: { _controller: AcmeHelloBundle:Default:medico }
+    methods: [POST|GET]
+acme_hospital_datos_medico:
+    path:      /medico/{id}
+    defaults: { _controller: AcmeHelloBundle:Default:datosMedicos }
+    methods: [POST|GET]
+acme_hospital_lista_promocion:
+    path:      /promocion
+    defaults: { _controller: AcmeHelloBundle:Default:listaPromociones }
+    methods: [POST|GET]
+acme_hospital_datos_promocion:
+    path:      /promocion/{id}
+    defaults: { _controller: AcmeHelloBundle:Default:promocion }
+    methods: [POST|GET]
+acme_hospital_lista_especialidad:
+    path:      /especialidad
+    defaults: { _controller: AcmeHelloBundle:Default:especialidad }
+    methods: [POST|GET]
+acme_hospital_datos_especialidad:
+    path:      /especialidad/{id}
+    defaults: { _controller: AcmeHelloBundle:Default:datosEspecialidades }
+    methods: [POST|GET]
+acme_hospital_addUser:
+    path:      /usuario
+    defaults: { _controller: AcmeHelloBundle:Security:addUser }
+    methods: [POST|GET]
+acme_hospital_test_secure:
+    pattern:   /secure/test_secure
+    defaults: { _controller: AcmeHelloBundle:Security:test }

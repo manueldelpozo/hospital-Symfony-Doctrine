@@ -1,0 +1,13 @@
+{% extends '::hospital.html.twig' %}
+{% block contenido %}
+
+<p>Nombre: {{promocion.name}}</p>
+<p>Descripción: {{promocion.description}}</p>
+<p>Precio Anterior: {{promocion.price}} €</p>
+<p style="color:red">Descuento: -{{promocion.discount}} %</p>
+<h3>Precio final: {{ discountFilter(promocion.price, promocion.discount) }} €</p>
+
+{% endblock %}
+{% block right %}
+{{ render(controller('AcmeHelloBundle:Default:listaPromociones2')) }}
+{% endblock %}
